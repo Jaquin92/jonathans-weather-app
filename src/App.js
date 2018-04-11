@@ -37,10 +37,18 @@ class App extends Component {
     let condition
     let icon
     let temp
+    let weather
     if (this.state.weather) {
       condition = this.state.weather.weather[0].description.toUpperCase()
       icon = this.state.weather.weather[0].icon
       temp = `${Math.floor(this.state.weather.main.temp)}°F`
+
+      weather = <div className="Wbody">
+        <img src={`http://openweathermap.org/img/w/${icon}.png`} alt="" />
+        <span>{condition}</span>
+        <span>{temp}</span>
+
+      </div>
     }
 
     return (
@@ -70,12 +78,7 @@ class App extends Component {
           }}
         />
         <button onClick={() => this.getWeather(this.state.zip)} >Get Weather</button>
-        <div className="Wbody">
-          <img src={`http://openweathermap.org/img/w/${icon}.png`} alt="" />
-          <span>{condition}</span>
-          <span>{temp}</span>
-
-        </div>
+        {weather}
       </div>
     );
   }

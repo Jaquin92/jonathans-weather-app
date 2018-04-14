@@ -49,6 +49,11 @@ class App extends Component {
         <span>{temp}</span>
 
       </div>
+    } else {
+      weather = <div>
+
+        <img style={{ height: "20vh" }} src={require("./weather.gif")} alt="" />
+      </div>
     }
 
     return (

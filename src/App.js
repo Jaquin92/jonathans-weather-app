@@ -52,7 +52,7 @@ class App extends Component {
     } else {
       weather = <div>
 
-        <img style={{ height: "20vh" }} src={require("./weather.gif")} alt="" />
+        <img style={{ height: "20vh" }} src="https://i.pinimg.com/originals/9b/4d/3f/9b4d3f25ca2e77f9ecba5d959463756b.gif" alt="" />
       </div>
     }
 
